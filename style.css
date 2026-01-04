@@ -1,0 +1,249 @@
+/* --- LOGO STYLING --- */
+.logo-box {
+    display: flex;
+    align-items: center; /* Centers logo and text vertically */
+    gap: 15px;           /* Space between logo and company name */
+}
+
+.logo-img {
+    width: 50px;         /* Set a specific width */
+    height: 50px;        /* Keep height the same as width for a square */
+    border-radius: 50%;  /* This makes it a CIRCLE */
+    object-fit: cover;   /* Prevents the image from stretching */
+    border: 1px solid #faf9fa; /* Optional: adds a white border around the circle */
+    box-shadow: 0 1px 2px rgb(252, 251, 251);
+}
+
+/* Adjust the title size if it's too big next to the logo */
+.logo-box h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #8e0282;
+}
+
+/* --- MOBILE RESPONSIVENESS FOR LOGO --- */
+@media (max-width: 768px) {
+    .logo-box {
+        flex-direction: column; /* Stacks logo on top of text on phones */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+/* --- GLOBAL RESET & TYPOGRAPHY --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Makes clicking nav links scroll smoothly */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e2e0e0;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* --- NAVIGATION BAR (STICKY) --- */
+header {
+    background: #c1f8eb;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #7c02b1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+/* --- HERO SECTION --- */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(251, 243, 214, 0.8), rgba(251, 243, 214, 0.8)), url('https://images.unsplash.com/photo-1551288049-bbbda540d3b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #605f5f;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* --- BUTTONS & HOVER --- */
+.button {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #d35400;
+    transform: translateY(-3px); /* Lifts up on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- CONTENT SECTIONS (CENTERED) --- */
+.content-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* CENTERS the section */
+}
+
+.bg-alt {
+    background-color: #f4f7f6;
+    max-width: 100%; /* Spans full width for background color */
+}
+
+.section-header {
+    text-align: center; /* Centers text */
+    margin-bottom: 50px;
+}
+
+.section-header h1 {
+    color: #004d99;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- CARD GRID & HOVER EFFECTS --- */
+.card-grid, .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* CENTERS the cards */
+    gap: 30px;
+}
+
+.card, .team-card {
+    background: #f6ebeb;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover, .team-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card i, .team-card i {
+    font-size: 2.5rem;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+/* --- CONTACT FORM (CENTERED) --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* CENTERS the form */
+    background: #f6edda;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #030303;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form .button {
+    width: 100%;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #333;
+    color: #ccc;
+}
+
+/* --- RESPONSIVE MOBILE VIEW --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+#about {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+}
